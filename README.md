@@ -8,7 +8,10 @@ Implementations details:
   Match information (shedule and coefficients) are parsing from https://www.parimatch.by/
   
 Involved technologies:
-  Programming Language: C# 7.0
-  Database: MS SQL Sevrer via Entity Framework
-  GUI Framework: Windows Forms
-  HTML parsing: AngleSharp
+  Programming Language: C# 7.0;
+  
+  Database: MS SQL Sevrer via Entity Framework;
+  
+  GUI Framework: Windows Forms;
+  
+  HTML parsing: AngleSharp;
