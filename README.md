@@ -1,6 +1,6 @@
 # VBet - Football Totalizator
 
-Desktop football totalizator.
+Windows desktop football totalizator.
 Features:
   Betting on current football matches of three popular leagues: English Premier League, Spainish Primera and Italian Serie A.
 
