@@ -1,0 +1,262 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{871B79CE-AF86-4396-9703-9048AF3BB235}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>VBet</RootNamespace>
+    <AssemblyName>VBet</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>FINAL EPIC LOGO.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AngleSharp, Version=0.9.9.0, Culture=neutral, PublicKeyToken=e83494dcdc6d31ea, processorArchitecture=MSIL">
+      <HintPath>..\packages\AngleSharp.0.9.9\lib\net45\AngleSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http, Version=4.1.1.2, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Http.4.3.3\lib\net46\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Security.Cryptography.Algorithms, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Algorithms.4.3.0\lib\net461\System.Security.Cryptography.Algorithms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Encoding, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Encoding.4.3.0\lib\net46\System.Security.Cryptography.Encoding.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Primitives.4.3.0\lib\net46\System.Security.Cryptography.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.X509Certificates, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.X509Certificates.4.3.0\lib\net461\System.Security.Cryptography.X509Certificates.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Migrations\201712121759135_Migr.cs" />
+    <Compile Include="Migrations\201712121759135_Migr.Designer.cs">
+      <DependentUpon>201712121759135_Migr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Model\BetListModel.cs" />
+    <Compile Include="Model\DatabaseApi\MatchLine\Tables\CoeffEntity.cs" />
+    <Compile Include="Model\DatabaseApi\MatchLine\Tables\MatchEntity.cs" />
+    <Compile Include="Model\DatabaseApi\MatchLine\MatchesContext.cs" />
+    <Compile Include="Model\DatabaseApi\UserData\Tables\BetEntity.cs" />
+    <Compile Include="Model\DatabaseApi\UserData\Tables\HistoryEntity.cs" />
+    <Compile Include="Model\DatabaseApi\UserData\Tables\UserEntity.cs" />
+    <Compile Include="Model\DatabaseApi\UserData\UserDataContext.cs" />
+    <Compile Include="Model\DatabaseApi\DatabaseParserUpdater.cs" />
+    <Compile Include="Model\DatabaseApi\IUpdater.cs" />
+    <Compile Include="Model\MatchListModel.cs" />
+    <Compile Include="Model\ModelExceptions\AlreadyExistsUserClientException.cs" />
+    <Compile Include="Model\ModelExceptions\EmptyParameterException.cs" />
+    <Compile Include="Model\ModelExceptions\NotEnoughMoneyUserClientException.cs" />
+    <Compile Include="Model\ModelExceptions\TooLateToBetUserClientException.cs" />
+    <Compile Include="Model\Parser\Available.cs" />
+    <Compile Include="Model\Parser\Exceptions\ParserException.cs" />
+    <Compile Include="Model\Parser\Exceptions\ParserLoadHtmlException.cs" />
+    <Compile Include="Model\Parser\HtmlLoader.cs" />
+    <Compile Include="Model\Parser\IParser.cs" />
+    <Compile Include="Model\Parser\IParserSettings.cs" />
+    <Compile Include="Model\Parser\MatchParser\Coefficient.cs" />
+    <Compile Include="Model\Parser\MatchParser\Match.cs" />
+    <Compile Include="Model\Parser\MatchParser\MatchParser.cs" />
+    <Compile Include="Model\Parser\MatchParser\MatchSettings.cs" />
+    <Compile Include="Model\Parser\ParserWorker.cs" />
+    <Compile Include="Model\ModelExceptions\UserClientException.cs" />
+    <Compile Include="Model\UserListModel.cs" />
+    <Compile Include="Presenter\AuthorizationFormPresenter.cs" />
+    <Compile Include="Presenter\BetFormPresenter.cs" />
+    <Compile Include="Presenter\MainFormPresenter.cs" />
+    <Compile Include="Presenter\MyBetsFormPresenter.cs" />
+    <Compile Include="Presenter\RegistrationFormPresenter.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\AuthorizationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AuthorizationForm.Designer.cs">
+      <DependentUpon>AuthorizationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\BetForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\BetForm.Designer.cs">
+      <DependentUpon>BetForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\IAuthorizationForm.cs" />
+    <Compile Include="View\IBetForm.cs" />
+    <Compile Include="View\IMainForm.cs" />
+    <Compile Include="View\IMyBetsForm.cs" />
+    <Compile Include="View\IRegistrationForm.cs" />
+    <Compile Include="View\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\MessageBoxService\IMessageBoxService.cs" />
+    <Compile Include="View\MessageBoxService\MessageBoxService.cs" />
+    <Compile Include="View\MyBetsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\MyBetsForm.Designer.cs">
+      <DependentUpon>MyBetsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\PlaceBetForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\PlaceBetForm.Designer.cs">
+      <DependentUpon>PlaceBetForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\RegistrationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\RegistrationForm.Designer.cs">
+      <DependentUpon>RegistrationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserInfo.cs" />
+    <Compile Include="View\UserStatus.cs" />
+    <Compile Include="_VBet_Model_DatabaseApi_MatchLine_MatchesContextDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_VBet_Model_DatabaseApi_MatchLine_MatchesContextDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_VBet_Model_DatabaseApi_MatchLine_MatchesContextDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_VBet_Model_DatabaseApi_MatchLine_MatchesContextDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_VBet_Model_DatabaseApi_MatchLine_MatchesContextDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_VBet_Model_DatabaseApi_MatchLine_MatchesContextDataSet2.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Migrations\201712121759135_Migr.resx">
+      <DependentUpon>201712121759135_Migr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="View\AuthorizationForm.resx">
+      <DependentUpon>AuthorizationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\BetForm.resx">
+      <DependentUpon>BetForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\MyBetsForm.resx">
+      <DependentUpon>MyBetsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\PlaceBetForm.resx">
+      <DependentUpon>PlaceBetForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\RegistrationForm.resx">
+      <DependentUpon>RegistrationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\VBet.Model.DatabaseApi.MatchLine.Tables.CoeffEntity.datasource" />
+    <None Include="Properties\DataSources\VBet.Model.DatabaseApi.UserData.Tables.BetEntity.datasource" />
+    <None Include="Properties\DataSources\_VBet_Model_DatabaseApi_MatchLine_MatchesContextDataSet1.CoeffsRow.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="_VBet_Model_DatabaseApi_MatchLine_MatchesContextDataSet.xsc">
+      <DependentUpon>_VBet_Model_DatabaseApi_MatchLine_MatchesContextDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="_VBet_Model_DatabaseApi_MatchLine_MatchesContextDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_VBet_Model_DatabaseApi_MatchLine_MatchesContextDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_VBet_Model_DatabaseApi_MatchLine_MatchesContextDataSet.xss">
+      <DependentUpon>_VBet_Model_DatabaseApi_MatchLine_MatchesContextDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="_VBet_Model_DatabaseApi_MatchLine_MatchesContextDataSet1.xsc">
+      <DependentUpon>_VBet_Model_DatabaseApi_MatchLine_MatchesContextDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="_VBet_Model_DatabaseApi_MatchLine_MatchesContextDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_VBet_Model_DatabaseApi_MatchLine_MatchesContextDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_VBet_Model_DatabaseApi_MatchLine_MatchesContextDataSet1.xss">
+      <DependentUpon>_VBet_Model_DatabaseApi_MatchLine_MatchesContextDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="_VBet_Model_DatabaseApi_MatchLine_MatchesContextDataSet2.xsc">
+      <DependentUpon>_VBet_Model_DatabaseApi_MatchLine_MatchesContextDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="_VBet_Model_DatabaseApi_MatchLine_MatchesContextDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_VBet_Model_DatabaseApi_MatchLine_MatchesContextDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_VBet_Model_DatabaseApi_MatchLine_MatchesContextDataSet2.xss">
+      <DependentUpon>_VBet_Model_DatabaseApi_MatchLine_MatchesContextDataSet2.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="FINAL EPIC LOGO.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
