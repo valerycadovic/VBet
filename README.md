@@ -13,3 +13,4 @@
 ### Использованные технологии
 - Библиотека [AngleSharp](https://www.google.by/search?q=AngleSharp&oq=AngleSharp&aqs=chrome..69i57j0l5.3046j0j7&sourceid=chrome&ie=UTF-8) для парсинга HTML
 - Microsoft SQL Server для работы с базами данных
+- Windows Forms для разработки графического интерфейса пользователя
